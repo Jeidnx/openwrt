@@ -14,6 +14,13 @@ lantiq_setup_interfaces()
 	arcadyan,arv7519rw22)
 		ucidef_set_interface_lan "lan1 lan2 lan3 lan4 lan5"
 		;;
+    avm,fritz3390)
+        ucidef_set_interface_lan "lan1 lan2 lan3 lan4 lan-wasp"
+		;;
+	avm,fritz7490|\
+	avm,fritz7490-micron)
+        ucidef_set_interface_lan "lan1 lan2 lan3 lan4 lan-wasp"
+		;;
 	avm,fritz5490|\
 	avm,fritz5490-micron)
 		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
@@ -39,8 +46,6 @@ lantiq_setup_interfaces()
 	avm,fritz7360-v2|\
 	avm,fritz7362sl|\
 	avm,fritz7430|\
-	avm,fritz7490|\
-	avm,fritz7490-micron|\
 	buffalo,wbmr-300hpd|\
 	tplink,vr200|\
 	tplink,vr200v)
